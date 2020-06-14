@@ -1,0 +1,9 @@
+//
+// File created by:  ncverilog
+// Do not modify this file
+//
+testbench_pcpi.v
+nn_pcpi.sv
+picorv32.v
++define+COMPRESSED_ISA
++access+r

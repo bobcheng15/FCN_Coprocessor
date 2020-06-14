@@ -1,0 +1,50 @@
+ncverilog: 14.10-s005: (c) Copyright 1995-2014 Cadence Design Systems, Inc.
+TOOL:	ncverilog	14.10-s005: Started on Jan 11, 2020 at 15:15:12 CST
+ncverilog
+	testbench_pcpi.v
+	nn_pcpi.sv
+	picorv32.v
+	+define+COMPRESSED_ISA
+	+access+r
+Loading snapshot worklib.testbench:v .................... Done
+*Verdi3* Loading libsscore_ius141.so
+*Verdi3* : Enable Parallel Dumping.
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+         -4
+         4
+
+4294967290
+
+Now Testing the nn coprocessorThe image is: 6
+Time elapsed: 161456
+The image is: 1
+Time elapsed: 2656
+The image is: 5
+Time elapsed: 2656
+
+Cycle counter ......... 183284
+Instruction counter ..... 3835
+CPI: 47.79
+Status:DONE
+
+------------------------------------------------------------
+EBREAK instruction at 0x000004A4
+pc  000004A7    x8  00000000    x16 00000000    x24 00000003
+x1  00000474    x9  00000000    x17 00000000    x25 00000001
+x2  00C00000    x10 20000000    x18 00000002    x26 00009002
+x3  DEADBEEF    x11 20001128    x19 00000160    x27 00009002
+x4  DEADBEEF    x12 0000004F    x20 00000000    x28 00000000
+x5  00000DE4    x13 0000004E    x21 00000015    x29 00000000
+x6  00000008    x14 00000045    x22 000004A4    x30 00000000
+x7  00000000    x15 000001E0    x23 000004A4    x31 000000C4
+------------------------------------------------------------
+Number of fast external IRQs counted: 0
+Number of slow external IRQs counted: 0
+Number of timer IRQs counted: 0
+TRAP after 254279 clock cycles
+ALL TESTS PASSED.
+Simulation complete via $finish(1) at time 2543890 NS + 1
+./testbench_pcpi.v:307 				$finish;
+ncsim> exit
+TOOL:	ncverilog	14.10-s005: Exiting on Jan 11, 2020 at 15:30:11 CST  (total: 00:14:59)

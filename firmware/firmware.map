@@ -1,0 +1,87 @@
+Archive member included to satisfy reference by file (symbol)
+
+/users/course/tools/riscv32i/lib/gcc/riscv32-unknown-elf/8.2.0/libgcc.a(div.o)
+                              firmware/print.o (__udivsi3)
+
+Discarded input sections
+
+ .debug_line    0x0000000000000000      0x169 /users/course/tools/riscv32i/lib/gcc/riscv32-unknown-elf/8.2.0/libgcc.a(div.o)
+ .debug_info    0x0000000000000000       0x26 /users/course/tools/riscv32i/lib/gcc/riscv32-unknown-elf/8.2.0/libgcc.a(div.o)
+ .debug_abbrev  0x0000000000000000       0x14 /users/course/tools/riscv32i/lib/gcc/riscv32-unknown-elf/8.2.0/libgcc.a(div.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /users/course/tools/riscv32i/lib/gcc/riscv32-unknown-elf/8.2.0/libgcc.a(div.o)
+ .debug_str     0x0000000000000000       0xa3 /users/course/tools/riscv32i/lib/gcc/riscv32-unknown-elf/8.2.0/libgcc.a(div.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+mem              0x0000000000000000 0x0000000000bf0000
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+
+.memory         0x0000000000000000     0x1269
+                0x0000000000000000                . = 0x0
+ start*(.text)
+ *(.text)
+ .text          0x0000000000000000      0x4ac firmware/start.o
+                0x00000000000004a6                hard_nn_pcpi
+ .text          0x00000000000004ac      0x3ea firmware/irq.o
+                0x00000000000004ac                irq
+ .text          0x0000000000000896      0x138 firmware/print.o
+                0x0000000000000896                print_chr
+                0x00000000000008b4                print_str
+                0x00000000000008e8                print_dec
+                0x0000000000000976                print_hex
+ .text          0x00000000000009ce      0x110 firmware/nn_pcpi.o
+                0x00000000000009ce                nn_pcpi
+ .text          0x0000000000000ade      0x2d6 firmware/knn_mmap.o
+                0x0000000000000ade                knn_mmap
+ .text          0x0000000000000db4      0x1bc firmware/stats.o
+                0x0000000000000eae                stats
+                0x0000000000000f56                tick
+ *fill*         0x0000000000000f70        0x0 
+ .text          0x0000000000000f70       0xb4 /users/course/tools/riscv32i/lib/gcc/riscv32-unknown-elf/8.2.0/libgcc.a(div.o)
+                0x0000000000000f70                __divsi3
+                0x0000000000000f78                __udivsi3
+                0x0000000000000fc0                __umodsi3
+                0x0000000000000ff4                __modsi3
+ *(*)
+ .data          0x0000000000001024        0x0 firmware/start.o
+ .bss           0x0000000000001024        0x0 firmware/start.o
+ .data          0x0000000000001024        0x0 firmware/irq.o
+ .bss           0x0000000000001024        0xc firmware/irq.o
+ .rodata        0x0000000000001030      0x16b firmware/irq.o
+ .comment       0x000000000000119b       0x11 firmware/irq.o
+                                         0x12 (size before relaxing)
+ .data          0x00000000000011ac        0x0 firmware/print.o
+ .bss           0x00000000000011ac        0x0 firmware/print.o
+ .rodata        0x00000000000011ac       0x11 firmware/print.o
+ .comment       0x00000000000011bd       0x12 firmware/print.o
+ .data          0x00000000000011bd        0x0 firmware/nn_pcpi.o
+ .bss           0x00000000000011bd        0x0 firmware/nn_pcpi.o
+ *fill*         0x00000000000011bd        0x3 
+ .rodata        0x00000000000011c0       0x43 firmware/nn_pcpi.o
+ .comment       0x0000000000001203       0x12 firmware/nn_pcpi.o
+ .data          0x0000000000001203        0x0 firmware/knn_mmap.o
+ .bss           0x0000000000001203        0x0 firmware/knn_mmap.o
+ *fill*         0x0000000000001203        0x1 
+ .rodata        0x0000000000001204       0x1e firmware/knn_mmap.o
+ .comment       0x0000000000001222       0x12 firmware/knn_mmap.o
+ .data          0x0000000000001222        0x0 firmware/stats.o
+ .bss           0x0000000000001222        0x0 firmware/stats.o
+ *fill*         0x0000000000001222        0x2 
+ .rodata        0x0000000000001224       0x45 firmware/stats.o
+ .comment       0x0000000000001269       0x12 firmware/stats.o
+ .data          0x0000000000001269        0x0 /users/course/tools/riscv32i/lib/gcc/riscv32-unknown-elf/8.2.0/libgcc.a(div.o)
+ .bss           0x0000000000001269        0x0 /users/course/tools/riscv32i/lib/gcc/riscv32-unknown-elf/8.2.0/libgcc.a(div.o)
+                0x000000000000127b                end = .
+LOAD firmware/start.o
+LOAD firmware/irq.o
+LOAD firmware/print.o
+LOAD firmware/nn_pcpi.o
+LOAD firmware/knn_mmap.o
+LOAD firmware/stats.o
+LOAD /users/course/tools/riscv32i/lib/gcc/riscv32-unknown-elf/8.2.0/libgcc.a
+OUTPUT(firmware/firmware.elf elf32-littleriscv)

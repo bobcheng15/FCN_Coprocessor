@@ -1,0 +1,80 @@
+wvSetPosition -win $_nWave1 {("G1" 0)}
+wvOpenFile -win $_nWave1 \
+           {/users/course/2019F/cs401000/dsd29/Final_/testbench.fsdb}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/testbench"
+wvGetSignalSetScope -win $_nWave1 "/testbench/top/knn_pcpi"
+wvSetPosition -win $_nWave1 {("G1" 4)}
+wvSetPosition -win $_nWave1 {("G1" 4)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/testbench/top/knn_pcpi/clk} \
+{/testbench/top/knn_pcpi/index_i\[31:0\]} \
+{/testbench/top/knn_pcpi/index_j\[31:0\]} \
+{/testbench/top/knn_pcpi/state\[2:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 1 2 3 4 )} 
+wvSetPosition -win $_nWave1 {("G1" 4)}
+wvSetPosition -win $_nWave1 {("G1" 13)}
+wvSetPosition -win $_nWave1 {("G1" 13)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/testbench/top/knn_pcpi/clk} \
+{/testbench/top/knn_pcpi/index_i\[31:0\]} \
+{/testbench/top/knn_pcpi/index_j\[31:0\]} \
+{/testbench/top/knn_pcpi/state\[2:0\]} \
+{/testbench/top/knn_pcpi/tmp0\[31:0\]} \
+{/testbench/top/knn_pcpi/tmp1\[31:0\]} \
+{/testbench/top/knn_pcpi/tmp2\[31:0\]} \
+{/testbench/top/knn_pcpi/tmp3\[31:0\]} \
+{/testbench/top/knn_pcpi/tmp4\[31:0\]} \
+{/testbench/top/knn_pcpi/tmp5\[31:0\]} \
+{/testbench/top/knn_pcpi/tmp6\[31:0\]} \
+{/testbench/top/knn_pcpi/tmp7\[31:0\]} \
+{/testbench/top/knn_pcpi/tmp8\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 5 6 7 8 9 10 11 12 13 )} 
+wvSetPosition -win $_nWave1 {("G1" 13)}
+wvSetPosition -win $_nWave1 {("G1" 13)}
+wvSetPosition -win $_nWave1 {("G1" 13)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/testbench/top/knn_pcpi/clk} \
+{/testbench/top/knn_pcpi/index_i\[31:0\]} \
+{/testbench/top/knn_pcpi/index_j\[31:0\]} \
+{/testbench/top/knn_pcpi/state\[2:0\]} \
+{/testbench/top/knn_pcpi/tmp0\[31:0\]} \
+{/testbench/top/knn_pcpi/tmp1\[31:0\]} \
+{/testbench/top/knn_pcpi/tmp2\[31:0\]} \
+{/testbench/top/knn_pcpi/tmp3\[31:0\]} \
+{/testbench/top/knn_pcpi/tmp4\[31:0\]} \
+{/testbench/top/knn_pcpi/tmp5\[31:0\]} \
+{/testbench/top/knn_pcpi/tmp6\[31:0\]} \
+{/testbench/top/knn_pcpi/tmp7\[31:0\]} \
+{/testbench/top/knn_pcpi/tmp8\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 5 6 7 8 9 10 11 12 13 )} 
+wvSetPosition -win $_nWave1 {("G1" 13)}
+wvGetSignalClose -win $_nWave1
+wvSetCursor -win $_nWave1 135638172.404040 -snap {("G2" 0)}
+wvZoomAll -win $_nWave1
+wvZoom -win $_nWave1 1581646533.333333 1622385913.737374
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoom -win $_nWave1 1569664362.626262 1615196611.313131
+wvZoom -win $_nWave1 1611379261.170434 1615104626.972087
+wvZoom -win $_nWave1 1620643756.728956 1620809328.542363
+wvSelectSignal -win $_nWave1 {( "G1" 2 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 2 )} 
+wvSetRadix -win $_nWave1 -format UDec
+wvSetCursor -win $_nWave1 1620771196.851047 -snap {("G1" 2)}
